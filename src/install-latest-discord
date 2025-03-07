@@ -1,0 +1,10 @@
+#! /bin/bash
+
+wget "https://discord.com/api/download/stable?platform=linux&format=tar.gz" -O discord.tar.gz
+
+sudo mkdir -p /usr/share/discord
+sudo tar --strip-components=1 -xvzf discord.tar.gz -C /usr/share/discord
+rm discord.tar.gz
+sudo cp /usr/share/discord/discord.png /usr/share/icons/discord.png
+sudo ln -sf -v /usr/share/discord/Discord /usr/bin/Discord
+sudo cp -r -v /usr/share/discord/discord.desktop /usr/share/applications
