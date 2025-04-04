@@ -1,8 +1,10 @@
 #! /bin/bash
 
+sudo rm -rf /usr/share/discord # clear installation
+
 wget "https://discord.com/api/download/stable?platform=linux&format=tar.gz" -O discord.tar.gz
 
-sudo mkdir -p /usr/share/discord
+sudo mkdir /usr/share/discord
 sudo tar --strip-components=1 -xvzf discord.tar.gz -C /usr/share/discord
 rm discord.tar.gz
 sudo cp /usr/share/discord/discord.png /usr/share/icons/discord.png
